@@ -1,0 +1,62 @@
+.container {
+  padding: 20px;
+  flex-grow: 0.15;
+  border-right: 1px solid black;
+  display: flex;
+  gap: 10px;
+  background: beige;
+
+  @media (max-width: 767px) {
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    max-width: 200px;
+
+    &[data-opened="false"] {
+      display: none;
+    }
+  }
+}
+
+.menuItems {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.menuItems a {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 15px 0;
+  text-decoration: none;
+}
+
+.burgerMenu {
+  display: none;
+
+  @media screen and (max-width: 767px) {
+    &[data-opened="true"] {
+      display: block;
+      position: absolute;
+      z-index: 1000;
+      cursor: pointer;
+    }
+  }
+}
+
+.crossWrapper {
+  display: none;
+  max-width: 30px;
+  cursor: pointer;
+
+  @media screen and (max-width: 767px) {
+    display: block;
+  }
+}
+
+.activeItem {
+  color: red;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}

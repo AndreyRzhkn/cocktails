@@ -1,0 +1,25 @@
+.mainInfo {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.descriptionWrapper {
+  flex: 1;
+  min-width: 250px;
+}
+
+.imageWrapper {
+  flex: 1;
+}
+
+.imageWrapper img {
+  object-fit: fill;
+  max-width: 100%;
+  min-width: 250px;
+}
+
+.ingredients {
+  display: flex;
+  gap: 30px;
+}
